@@ -17,6 +17,10 @@ app.set('views', path.join(__dirname, '/views/'));
 app.engine('hbs', exphbs({ extname: 'hbs', defaultLayout: 'mainLayout', layoutsDir: __dirname + '/views/layouts/' }));
 app.set('view engine', 'hbs');
 
+app.get('/', (req, res) => {
+    res.send('This is the Homepage  <button><a href="/employee">Check employee<a></button>')
+})
+
 app.use('/employee', employeeController);
 
 const PORT = process.env.PORT || 3000;

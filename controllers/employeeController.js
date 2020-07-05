@@ -69,7 +69,7 @@ router.get('/list', (req, res) => {
         else {
             console.log('Error in retrieving employee list: ' + err);
         }
-    });
+    }).lean();
 });
 
 const handleValidationError = (err, body) => {
@@ -95,7 +95,7 @@ router.get('/:id', (req, res) => {
                 employee: doc
             });
         }
-    });
+    }).lean();
 });
 
 router.get('/delete/:id', (req, res) => {
