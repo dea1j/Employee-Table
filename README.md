@@ -1,3 +1,3 @@
 # Employee-List
-A CRUD Operation table to save ur employees in a mongodb table
+A CRUD table to save ur employees data
 Used express handle-bar as the template engine
